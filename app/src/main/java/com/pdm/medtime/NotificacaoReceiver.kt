@@ -26,7 +26,6 @@ class NotificacaoReceiver : BroadcastReceiver() {
             )
             notificationManager.createNotificationChannel(canal)
         }
-
         val notificacao = NotificationCompat.Builder(context, channelId)
             .setContentTitle("Remédio")
             .setContentText("Está na hora de tomar: ${intent.getStringExtra("nomeMedicamento")}")

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/medication_layout"
     android:layout_width="match_parent"
@@ -16,18 +15,42 @@
         android:layout_alignParentTop="true"
         android:background="#1A2A4B"
         android:padding="16dp"
-        android:text="MedTime"
+        android:text="Remédios tomados"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <LinearLayout
+        android:id="@+id/table_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nome"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Data"></TextView>
+
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_below="@id/title">
+        android:layout_below="@id/table_header">
 
         <LinearLayout
-            android:id="@+id/lista_itens"
+            android:id="@+id/lista_remediosTomados"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -35,31 +58,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/btn_listaTomados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
-        android:backgroundTint="#1A2A4B"
-        android:text="Lista tomados"
-        android:textColor="@color/white"
-        app:tint="@color/white">
-
-    </Button>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnAdicionar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
-        android:backgroundTint="#1A2A4B"
-        android:src="@drawable/baseline_add_24"
-        app:shapeAppearance="@null"
-        app:tint="@color/white" />
-
 
 </RelativeLayout>
